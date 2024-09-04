@@ -35,6 +35,6 @@ class CASCountTest {
         thread1.join();
         thread2.join();
 
-        assertEquals(2 * incrementsPerThread, counter.get());
+        assertEquals(20, counter.get());
     }
 }
