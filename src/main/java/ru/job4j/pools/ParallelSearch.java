@@ -32,7 +32,7 @@ public class ParallelSearch<T> extends RecursiveTask<Integer> {
         int leftResult = left.join();
         int rightResult = right.join();
 
-        return (leftResult != -1) ? leftResult : rightResult;
+        return Math.max(leftResult, rightResult);
     }
 
     private int linearSearch(T[] array, T target, int from, int to) {
